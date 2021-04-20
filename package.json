@@ -1,0 +1,28 @@
+{
+  "name": "jbjj.github.io",
+  "version": "1.0.0",
+  "description": "Prof. Joabe Jesus",
+  "private": "true",
+  "directories": {
+    "src": "src"
+  },
+  "scripts": {
+    "commit": "cz"
+  },
+  "keywords": [],
+  "author": "Joabe Jesus",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^6.0.0",
+    "standard-version": "^9.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
