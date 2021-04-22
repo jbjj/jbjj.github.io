@@ -1,23 +1,23 @@
 # ...
 
-## **Coordenador**:
+[![Conventional Changelog](https://img.shields.io/badge/changelog-conventional-brightgreen.svg)](http://conventional-changelog.github.io)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)
 
-   <img src="https://avatars.githubusercontent.com/u/8330781?s=32&v=44" style="vertical-align: middle; border-radius: 50%;"></img> Prof. Joabe Jesus ([joabe.jesus@upe.br](joabe.jesus@upe.br))
+---
 
-## **Contribuidores**
+## [CHANGELOG](./CHANGELOG.md)
 
-   Veja a lista de [contribuidores](./docs/TEAM.md).
+## [LICENSE](./LICENSE.md)
 
-## **Licença**
+---
 
-   Veja o arquivo de [licença](./LICENSE.md).
+## EQUIPE
 
-## *Semantic Versioning*
+   - <img src="https://avatars.githubusercontent.com/u/8330781?s=32&v=44" style="vertical-align: middle; border-radius: 50%;"></img> Prof. Joabe Jesus ([joabe.jesus@upe.br](joabe.jesus@upe.br)) - COORDENADOR
+   - CONTRIBUIDORES
+     - Veja a lista de [contribuidores](./docs/TEAM.md).
 
-   Veja detalhes sobre [VERSIONAMENTO](./SEMVER.md).
+## COMO CONTRIBUIR?
 
-## **Estrutura do repositório**
-
-   Estrutura do repositório contém código na raiz e e pasta 'docs' para separar documentação.
-
-   - Veja a [Documentação](./docs/README.md) do projeto no arquivo [./docs/README.md](./docs/README.md).
+   - Veja [como contribuir](./CONTRIBUTING.md).

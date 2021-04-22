@@ -9,24 +9,24 @@ A criação do repositório foi feita seguindo os passos abaixo:
    > git init
 
 2. Adicionar arquivos de markdown:
-   1. Copiar esse arquivo (SEMVER.md) para a raiz do projeto;
-   2. Copiar o arquivo [modeloREADME.md](./modeloREADME.md) para a raiz do projeto;
-   3. Renomear de modeloREADME.md para README.md;
-   4. Para projetos privados, copiar o arquivo LICENSE.md que usa [*Creative Commons Attribution-NoDerivatives 4.0 International*](https://creativecommons.org/licenses/by-nd/4.0/)
+   1. Copiar o arquivo [modeloREADME.md](./modeloREADME.md) para a raiz do projeto;
+   2. Renomear de modeloREADME.md para README.md;
+   3. Para projetos privados, copiar o arquivo [LICENSE.md](./LICENSE.md) que usa [*Creative Commons Attribution-NoDerivatives 4.0 International*](https://creativecommons.org/licenses/by-nd/4.0/)
+   4. Copiar o arquivo [CONTRIBUTING.md](./CONTRIBUTING.md) para a raiz do projeto;
    5. Criar pasta docs e copiar os arquivos:
-       - ./docs/TEAM.md
-       - ./docs/README.md
-       - ./docs/DESIGN.md
-       - ./docs/REQS.md
-       - ./docs/TOOLS.md
+       - [./docs/TEAM.md](./docs/TEAM.md)
+       - [./docs/README.md](./docs/README.md)
+       - [./docs/DESIGN.md](./docs/DESIGN.md)
+       - [./docs/REQS.md](./docs/REQS.md)
+       - [./docs/TOOLS.md](./docs/TOOLS.md)
 
 3. Verificar README.md
      - Esse arquivo possui descrição e links para:
-       - LICENSE.md
+       - ./LICENSE.md
          - Para projetos privados: [*Creative Commons Attribution-NoDerivatives 4.0 International*](https://creativecommons.org/licenses/by-nd/4.0/)
+       - ./CONTRIBUTING.md
        - ./docs/TEAM.md
        - ./docs/README.md
-       - SEMVER.md
 
 4. Verificar ./docs/TEAM.md
 
