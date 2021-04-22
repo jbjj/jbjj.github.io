@@ -72,6 +72,8 @@
 
    > ver [NATIVEScript](./NATIVEJS.md).
 
+   > ver [Ruby](./RUBY.md).
+
 
 ---
 
@@ -90,9 +92,10 @@
     - Performance
     - 
 
-### MODULES - CommonJS
+### MODULES - CommonJS API
 
 - CommonJS (Aug,2009) / ServerJS (Jan,2009)
+  > http://www.commonjs.org \
   > https://en.wikipedia.org/wiki/CommonJS \
   > https://medium.com/@cgcrutch18/commonjs-what-why-and-how-64ed9f31aa46#:~:text=CommonJS%20is%20a%20module%20formatting,heavily%20influenced%20NodeJS's%20module%20management
   - **DEFINITION**:
@@ -100,6 +103,11 @@
   - **BENEFITS**:
     - Establish conventions on the module ecosystem for JavaScript outside of the web browser.
     - Assists in the server-side development of apps and it’s format has heavily influenced NodeJS’s module management.
+    - With CommonJS-compliant systems, you can use JavaScript to write:
+      - Server-side JavaScript applications
+      - Command line tools
+      - Desktop GUI-based applications
+      - Hybrid applications (Titanium, Adobe AIR)
   - **EXAMPLE**:
     ```javascript
     const maxInterval = 12;
