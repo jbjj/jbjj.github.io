@@ -1,0 +1,13 @@
+url: http://jbjj.github.io
+#url: "http://localhost:4000"
+
+title: Prof. Joabe Jesus
+description: Prof. Joabe Jesus's blog
+
+timezone: America/Recife # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+exclude: [README.md, manifest.json, package.json, package-lock.json, commitlint.config.js, .husky, CHANGELOG.md, bibtex2html.md]
+
+include: [files,src]
+
+permalink: pretty

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ {% if page.entry.title != null %}
+   <title>{{ page.entry.title }}</title>
+ {% else %}
+   <title>{{ page.title }}</title>
+ {% endif %}
+ <meta name="author" content="Joabe Jesus" />
+ <meta name="description" content="Joabe Jesus' Homepage" />
+ <meta name="keywords" content="Jesus, Joabe, de Jesus, CSP, CSP-Prover, theorem prover" />
+
+ <!-- syntax highlighting CSS -->
+ <link rel="stylesheet" href="{{site.url}}/css/syntax.css" type="text/css" />
+
+ <!-- <link href="/css/highlight.css" rel="stylesheet" type="text/css"> -->
+ <link href="{{site.url}}/css/gists.css" rel="stylesheet" type="text/css"/>
+
+ <!-- Homepage CSS -->
+ <link rel="stylesheet" href="{{site.url}}/css/screen.css" type="text/css" media="screen, projection" />
+
+ <!-- Typekit
+ <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
+ <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+ -->
+
+ <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css' />
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35893481-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="outer">
+    <div id="top"></div>
+
+    <div id="left">
+      <img src="{{site.url}}/images/jbjj.jpg" width="64" height="64" style="border-radius: 50%;"/>
+    </div>
+
+    <div class="site">
+      <div class="title">
+        <a href="{{site.url}}/">Joabe Jesus</a>
+        <a class="extra" href="{{site.url}}/about">about me</a>
+        <a class="extra" href="{{site.url}}/presentations">presentations</a>
+        <a class="extra" href="{{site.url}}/publications">publications</a>
+        <a class="extra" href="{{site.url}}/research">research</a>
+        <a class="extra" href="{{site.url}}/teaching">teaching</a>
+        <a class="extra" href="{{site.url}}/extension">extension</a>
+      </div>
+
+      {{ content }}
+
+      <div class="footer">
+        <div class="contact">
+          <p>
+            Joabe Jesus - <a href="mailto:jbjj@ecomp.poli.br">jbjj@ecomp.poli.br</a><br />
+            <b>Assistant Professor</b> in the <a href="http://www.ecomp.poli.br/">Computer Engineering</a> course<br />
+             at <a href="http://www.poli.br/">Escola Politécnica de Pernambuco</a> (POLI)<br />
+             at <a href="http://www.upe.br">Universidade de Pernambuco</a> (UPE)<br />
+          </p>
+        </div>
+        <div class="contact">
+          <p>
+            <a href="http://www.upe.br">
+            <img src="http://upe.br/images/industrix/logo-nova4.png" height="56"
+                 alt="Universidade de Pernambuco"></a>
+            <a href="http://www.poli.br">
+            <img src="{{site.url}}/images/poli.png" height="56"
+                 alt="Escola Politécnica de Pernambuco"></a>
+            <a href="http://www.ecomp.poli.br">
+            <img src="{{site.url}}/images/ecomp.svg" height="56"
+                 alt="Engenharia da Computação"></img></a>
+          </p>
+        </div>
+        <div class="rss" style="vertical-align: middle;">
+          <a href="http://www.github.com/jbjj">
+            <svg alt="GitHub" class="octicon octicon-mark-github color-text-white" viewBox="0 0 16 16"
+                  version="1.1" height="54" width="54" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg></a>
+          <a href="{{site.url}}/feed.xml"><img src="{{site.url}}/images/rss.png" alt="Subscribe to RSS Feed" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="right">
+    </div>
+  </div>
+</body>
+</html>
