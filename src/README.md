@@ -10,16 +10,16 @@
 
 ## Semantic Versioning
 
-   > ver o [./SEMVER.md](./kb/SEMVER.md)
+   > ver o [./SEMVER.md](./SEMVER.md)
 
 ## Containers
 
-   > ver o [./DOCKER.md](./kb/DOCKER.md)
+   > ver o [./DOCKER.md](./DOCKER.md)
 
 ## Empacotamento
 
-   > ver o [./WEBPACK.md](./kb/WEBPACK.md)
+   > ver o [./WEBPACK.md](./WEBPACK.md)
 
 ## Testes
 
-   > ver o [./TESTS.md](./kb/TESTS.md)
+   > ver o [./TESTS.md](./TESTS.md)
