@@ -42,15 +42,15 @@ primrec PNfun :: "(PN,Events) pnfun"
 where
     "PNfun(Raw i p adj) =
            rawPosition(i)!p -> (let d = disp(dOmega(e))
-                                in $\$$(Raw i (p+d) (adj-d)))
-           [+] adjust(i)?e -> $\$$(Raw i p e)"
+                                in $(Raw i (p+d) (adj-d)))
+           [+] adjust(i)?e -> $(Raw i p e)"
   | "PNfun(LVDT i v) =
-           lvdtOutput(i)! (modulate v) -> $\$$(LVDT i v)
-           [+] coreMoved(i)? p -> $\$$(LVDT i (voltage p))"
+           lvdtOutput(i)! (modulate v) -> $(LVDT i v)
+           [+] coreMoved(i)? p -> $(LVDT i (voltage p))"
   | "PNfun(SimpleActuator i) =
-           $\$$(Raw i 0 0)
+           $(Raw i 0 0)
            |[ {| rawPosition i |} ]|
-           ( $\$$(LVDT i 0) [[ coreMoved i <== rawPosition i ]] )"
+           ( $(LVDT i 0) [[ coreMoved i <== rawPosition i ]] )"
   ```
   > Listing 4 SAS.PNfun function to specify processes bodies in CSPTP
 
