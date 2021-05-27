@@ -180,6 +180,9 @@ A configuração do repositório para [*semantic versioning schema (major.minor.
 6. Adicionar [commitzen](https://github.com/commitzen/cz-cli) para seguir as regras de commit de com um wizard:
 
    > npm install commitizen --save-dev
+
+   E inicializar o cz com o comando:
+
    > npx commitizen init cz-conventional-changelog --save-dev --save-exact
 
    Adicionando assim o [husky](https://github.com/commitzen/cz-conventional-changelog) na seção de *devDependencies* no  [**package.json**](./package.json) e modificando o arquivo [**package-lock.json**](./package-lock.json), no qual o cz-conventional-changelog é marcado com o atributo
