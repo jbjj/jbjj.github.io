@@ -1,0 +1,73 @@
+nametype ActuatorId = { 1..4 }
+
+nametype displacement = { -50..50}
+nametype angularVelocity = { -150..150}
+nametype voltage = { -500..500}
+
+channel rawPosition, adjust, coreMoved: ActuatorId.displacement
+
+channel lvdtOutput: ActuatorId.voltage
+
+max(x,y) = if (x > y) then x else y
+min(x,y) = if (x > y) then y else x
+
+gain(x,k) = x * k
+
+MAX = 40
+MIN = -40
+
+saturate(x) = max(MIN, min(x, MAX))
+
+dOmega(e) = saturate(gain(e,20))
+
+disp(v) = v / 20
+
+modulate(v) = v / 10
+
+senseVoltage(p) = gain(p,10)
+
+channel servoCmd, ehsvOutput: ActuatorId.displacement
+
+EHSV(i, e) =
+    rawPosition.i?p -> let d = disp(dOmega(e))
+                       within ehsvOutput.i!d -> EHSV(i, p - d)
+    [] servoCmd.i?newE -> EHSV(i, newE)
+
+assert EHSV(1,0) :[deadlock free]
+
+Raw(i, p) =
+    rawPosition.i!p -> Raw(i, p)
+    [] adjust.i?adj -> Raw(i, saturate(p + adj))
+    
+assert Raw(1,0) :[deadlock free]
+
+-- https://pt.wikipedia.org/wiki/LVDT
+LVDT(i, v) =
+    lvdtOutput.i!modulate(v) -> LVDT(i, v)
+    [] coreMoved.i?p -> LVDT(i, senseVoltage(p))
+
+PCU(i) =
+    (
+      EHSV(i, 0)
+      [| {| rawPosition.i, ehsvOutput.i |} |]
+      Raw(i, 0) [[ adjust.i <- ehsvOutput.i ]]
+    )
+    [| {| rawPosition.i |} |]
+    ( LVDT(i, 0) [[ coreMoved.i <- rawPosition.i ]] )
+
+assert PCU(1) :[deadlock free]
+
+channel controlColumn: ActuatorId.displacement
+
+ACE(i, p, feedback) =
+    controlColumn.i?newP -> servoCmd.i!(saturate(newP - feedback)) -> ACE(i, newP, feedback)
+    [] lvdtOutput.i?feedbackP -> servoCmd.i!(saturate(p - feedbackP)) -> ACE(i, p, feedbackP)
+
+assert ACE(1, 0, 0) :[deadlock free]
+
+SimpleActuator(i) =
+    ACE(i, 0, 0)
+    [| {| servoCmd.i, lvdtOutput.i |} |]
+    PCU(i)
+
+assert SimpleActuator(1) :[deadlock free]
