@@ -2,6 +2,8 @@
 
 ---
 
+The Simulink model is provided [HERE](sas.mdl).
+
 The SAS *Simulink* model in order to allow simulation execution is presented below:
 
   > ![](Fig5.png) \
