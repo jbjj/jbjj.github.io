@@ -2,6 +2,8 @@
 
 ---
 
+The complete CSPM specification is provided [HERE](sas.csp).
+
 Listing 1 below shows how we constrain our channels to work on an smaller range of values instead of the whole **Int** (integer) type.
 
   ```haskell

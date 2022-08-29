@@ -2,6 +2,8 @@
 
 ---
 
+The complete CSPTP specification is provided [HERE](sas.thy).
+
 To specify the SAS using CSPTP we create an Isabelle/HOL theory file SAS.thy with the structure presented in Listing 1. In particular, the theory is based on the theory DFP, essential for *deadlock* analysis and derived from the theory CSP_F (the encoding of the *CSP* *failures* model **F**).
 
   ```haskell
