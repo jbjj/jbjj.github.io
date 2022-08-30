@@ -1,0 +1,22 @@
+
+channel adjust : Int.Int
+channel servoCmd : Int.Int
+channel coreMoved : Int.Int
+channel ehsvOut : Int.Int
+channel rawPos : Int.Int
+channel lvdtOut : Int.Int
+
+Raw(i,p) = SKIP
+
+EHSV(i,p) = SKIP
+
+LVDT(i,p) = SKIP
+
+PCU(i) = || (P,A):
+         { ( EHSV(i,0) ,
+             {| servoCmd.i, rawPos.i, ehsvOut.i |}     ) ,
+           ( Raw(i,0) [[ adjust.i <- ehsvOut.i ]] ,
+             {| rawPos.i, ehsvOut.i |}                 ) ,
+           ( LVDT(i,0) [[ coreMoved.i <- rawPos.i ]] ,
+             {| rawPos.i, lvdtOut.i |}                 )
+         } @ [A] P
